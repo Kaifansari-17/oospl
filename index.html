@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Oceanic Origin Shipping provides certified maritime crew solutions, crew management, and training services for global shipping operations." />
+  <meta name="keywords" content="ship crew management, maritime services, seafarers, crew recruitment, STCW certified, shipping company India" />
+  <meta name="author" content="Oceanic Origin Shipping (OPC) Pvt. Ltd." />
+  <title>Oceanic Origin Shipping (OPC) Private Limited</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/b44b2aba65.js" crossorigin="anonymous"></script>
+  <!-- Leaflet CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Leaflet JS -->
+
+  <!-- <script src="script.js"></script> -->
+
+</head>
+
+<body>
+<style>
+  /* Base navbar styles */
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  position: fixed; /* Keep navbar fixed on top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+}
+
+.nav_class {
+  max-width: 1200px; /* Keep navbar content max width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Hide hamburger by default */
+.fa-bars {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+
+
+}
+
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* reduced gap */
+  justify-content: center;
+}
+
+/* Mobile view (≤768px) */
+@media (max-width: 768px) {
+  .header-buttons {
+   
+    flex-direction: column;
+    gap: 3px; /* even tighter on mobile */
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    gap: 2px;
+  }
+  #cancel_btn{
+    margin-top: -15px;
+  }
+
+}
+@media (max-width: 768px) {
+    #header {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+    }
+
+    .header-buttons .btn {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+
+</style>
+
+
+  <!-- nav bar container -->
+  <div class="container">
+    <div class="navbar">
+      <nav class="nav_class">
+        <div style="max-width: 100%; overflow-x: hidden;">
+          <div class="logo-group">
+            <img src="images/logo1-removebg-preview.png" alt="Logo Icon" class="logo-icon"
+              style="margin-left:90px; width: 20px; height: 20px;" />
+            <img src="images/new_namelogo.png" alt="Logo Name" class="logo-name"
+              style="width: 40% !important; height: 60% !important;" />
+          </div>
+        </div>
+
+
+
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <!-- <li><a href="#mission">Mission</a></li>
+               <li><a href="#vision">Vision</a></li> -->
+          <li><a href="#services">Services</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ------------Header Section--------------- -->
+  <div id="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-text">
+          <h1>Welcome to <span>Oceanic Origin Shipping (OPC) Private Limited</span></h1>
+          <p>We specialize in delivering skilled and certified crew for global maritime operations, ensuring safety,
+            compliance, and reliability in every project we handle.</p>
+          <div class="header-buttons">
+            <a href="#services" class="btn btn-primary">Our Services</a>
+            <a href="#contact" id="cancel_btn" class="btn btn-secondary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // header slide show  
+    const images = [
+      'images/1.jpeg',
+      'images/2.jpeg',
+      'images/3.jpeg',
+      'images/4.jpeg',
+      'images/5.jpeg'
+    ];
+
+    let current = 0;
+    const header = document.getElementById('header');
+
+    function changeBackground() {
+      header.style.backgroundImage = `url(${images[current]})`;
+      current = (current + 1) % images.length;
+    }
+
+    changeBackground(); // initial image
+    setInterval(changeBackground, 5000); // change every 5 seconds
+
+
+    // end header slide show  
+  </script>
+  <!-- ------------About Section--------------- -->
+
+  <div id="about">
+    <div class="box">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/Logo1.jpg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-tittle">About Us</h1>
+            <br>
+            <p>
+              <span>
+                Oceanic Origin Shipping (OPC) Private Limited is a trusted name in the maritime industry, committed
+                to
+                delivering reliable, efficient, and quality ship crew management services worldwide.
+                Headquartered in Navi Mumbai, India, we specialize in sourcing and managing highly
+                skilled
+                and motivated seafarers to meet the rigorous demands of global shipping.</span>
+              <br>
+              <br>
+              <span>
+                Driven by a passion for safety, professionalism, and customer satisfaction, we strive to
+                exceed client expectations through innovation, teamwork, and a tradition of quality. Our
+                comprehensive service offerings include crew supply, training, certification compliance,
+                visa assistance, and more—ensuring operational excellence on every voyage.</span>
+              <br>
+              <br>
+              <span>
+                At Oceanic Origin Shipping (OPC) Private Limited, we don't just manage crews—we empower them. By
+                continuously
+                investing in training and skill development, we prepare our personnel to uphold the
+                highest
+                standards of safety, efficiency, and environmental responsibility.</span>
+              <br>
+              <br>
+              <span>Your mission is our priority. Your success, our tradition.</span>
+
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------Mission Section ------------------------------------>
+
+  <div id="mission">
+    <div class="box">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <h1 class="sub-tittle">Our Mission</h1>
+            <br>
+            <p>
+              <span>
+                At Oceanic Origin Shipping (OPC) Private Limited, our mission is to deliver world-class ship crew
+                management services with unwavering commitment to safety, reliability, and client
+                satisfaction. We aim to support our partners by providing skilled, well-trained, and
+                dependable maritime professionals who meet the highest industry standards.</span>
+              <br>
+              <br>
+              <span>
+                Through continuous innovation, professional development, and a culture of
+                accountability, we strive to be the trusted partner that global maritime operators rely
+                on for seamless, efficient, and responsible crew solutions.</span>
+            </p>
+          </div>
+          <div class="about-col-1">
+            <img src="images/cruise1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!---------------------------Vision & Quality Assurance---------------------------->
+  <div id="vision">
+    <div class="box">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/Logo1.jpg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-tittle">Vision & Quality Assurance</h1>
+            <div class="tab-title">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                <b>Vision</b>
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                <b>Quality Assurance</b>
+              </p>
+
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <p>
+                <span>To be a globally recognized leader in ship crew management, known for delivering
+                  consistent excellence, upholding the highest standards of safety and
+                  professionalism,
+                  and fostering long-term partnerships built on trust and performance.</span>
+                <br>
+                <br>
+                <span>
+                  We envision a future where Oceanic Origin Shipping (OPC) Pvt. Ltd. sets the benchmark in
+                  maritime manpower solutions—empowering seafarers, enhancing client operations, and
+                  advancing the industry through innovation, integrity, and dedication.</span>
+              </p>
+            </div>
+            <div class="tab-contents" id="experience">
+              <p>
+                <span>
+                  At Oceanic Origin Shipping (OPC) Pvt. Ltd., quality is the foundation of everything we do.
+                  We are committed to delivering exceptional crew management services that meet the
+                  highest industry standards and exceed client expectations.</span>
+                <br>
+                <br>
+                <span>
+                  Our processes are built on strict compliance with international maritime
+                  regulations, continuous performance monitoring, and rigorous crew selection and
+                  training. We ensure every seafarer we deploy is not only technically qualified but
+                  also aligned with our values of safety, reliability, and professionalism.</span>
+                <br>
+                <br>
+                <span>
+                  By prioritizing crew competence, operational transparency, and environmental
+                  responsibility, we uphold a standard of excellence that protects our clients'
+                  vessels, crews, and reputations—every voyage, every time.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // logo slide show
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector('.clients-grid');
+      const cards = document.querySelectorAll('.client-card');
+      let index = 0;
+
+      // Function to scroll the clients container smoothly
+      const scrollClients = () => {
+        if (window.innerWidth > 768) return; // Only auto-scroll on mobile
+
+        // Scroll to the next card (right)
+        index = (index + 1) % cards.length; // Update index for the next card
+        const scrollAmount = cards[index].offsetLeft; // Get the offset position of the next card
+        container.scrollTo({ left: scrollAmount, behavior: 'smooth' }); // Scroll to the next card
+      };
+
+      // Start auto-scrolling every 3 seconds
+      setInterval(scrollClients, 3000); // Change slide every 3s
+
+      // Optional: Add event listener for manual scroll (swipe)
+      container.addEventListener("wheel", (event) => {
+        if (event.deltaX !== 0) {
+          // Check if it's scrolling horizontally
+          container.scrollLeft += event.deltaX;  // Scroll left or right based on wheel movement
+        }
+      });
+    });
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    container.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX; // Record initial touch position
+    });
+
+    container.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX; // Record end position
+      if (touchStartX - touchEndX > 50) {
+        container.scrollLeft += 200; // Swipe right (scroll to the right)
+      }
+      if (touchEndX - touchStartX > 50) {
+        container.scrollLeft -= 200; // Swipe left (scroll to the left)
+      }
+    });
+  </script>
+  <!-- ----------------Service---------------- -->
+
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Comprehensive maritime crew management solutions</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Crew Recruitment</h3>
+          <ul>
+            <li>Global talent sourcing</li>
+            <li>STCW certified professionals</li>
+            <li>Specialized vessel crew</li>
+            <li>Cadet training programs</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-ship"></i>
+          </div>
+          <h3>Crew Management</h3>
+          <ul>
+            <li>Full crew complement solutions</li>
+            <li>Rotation planning</li>
+            <li>Performance monitoring</li>
+            <li>Career development</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Training & Certification</h3>
+          <ul>
+            <li>STCW mandatory courses</li>
+            <li>Vessel-specific training</li>
+            <li>Safety & emergency drills</li>
+            <li>Leadership programs</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3>Documentation</h3>
+          <ul>
+            <li>Seafarer employment agreements</li>
+            <li>Certification management</li>
+            <li>Visa & travel coordination</li>
+            <li>MLC 2006 compliance</li>
+          </ul>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3>Medical Services</h3>
+          <ul>
+            <li>Pre-employment medicals</li>
+            <li>Vaccination programs</li>
+            <li>Emergency medical support</li>
+            <li>Mental health services</li>
+          </ul>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3>Payroll Solutions</h3>
+          <ul>
+            <li>Competitive salary packages</li>
+            <li>Tax management</li>
+            <li>Allotment services</li>
+            <li>Pension schemes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ----------------Clients---------------- -->
+
+  <div id="clients">
+    <div class="box">
+      <div class="container">
+        <h3 class="sub-title">Our Clients</h3>
+        <div class="clients-grid">
+
+          <div class="client-card">
+            <img src="images/GMA.png" alt="GMA Marine Ltd" />
+          </div>
+          <div class="client-card">
+            <img src="images/bin.png" alt="Bin Nowiran (BINCO)" />
+          </div>
+          <div class="client-card">
+            <img src="images/starlogo.png" alt="Star Technical & Marine Services" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <br>
+
+  <!-- ---------------contact------------------ -->
+  <div id="contact">
+    <div class="box">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-tittle">Contact US</h1>
+
+            <p><i class="fa-solid fa-location-dot"></i>Office no. 503, Shagun Reality Insignia,
+              Plot No. 195, Sector 19, Ulwe, Panvel, Raigad,<br> Navi Mumbai,
+              (MAHARASHTRA)- 410206. INDIA</p>
+            <p><i class="fa-solid fa-envelope"></i>resume@oceanicoriginshipping.com</p>
+
+            <!-- <p><i class="fa-solid fa-phone"></i> +91 86573 40987</p>
+                        <p><i class="fa-solid fa-phone"></i>+91 86930 40987</p>
+                        -->
+            <p> <i class="fab fa-whatsapp"></i></i> <a href="tel:+918657340987">+91 86573 40987</a>
+              <a href="https://wa.me/918657340987" target="_blank">
+
+              </a>
+            </p>
+            <p>
+              <a href="https://www.facebook.com/people/Oceanic-Origin-Shipping/pfbid02MujApUFk4kexkSoqJYy1DAzwxacVx9N2pLRbiap237TutHtThBPu7YJcEZN3eeVAl/" target="_blank" rel="noopener noreferrer">
+ <i class="fab fa-facebook-f"></i>Oceanic Origin Shipping 
+</a>
+
+            </p>
+            <p> <i class="fab fa-whatsapp"></i></i> <a href="tel:+918693040987">+91 86930 40987</a>
+              <a href="https://wa.me/918693040987" target="_blank">
+
+              </a>
+            </p>
+
+            <a href="PROFILE OCEANIC ORIGIN SHIPPING.pdf" download class="btn btn2">Download Profile </a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Enter Your Name" required>
+              <input type="email" name="Email" placeholder="Enter Your Mail Id" required>
+              <textarea name="Message" rows="6" placeholder="Enter your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="map-section">
+      <div class="container">
+        <h2>Our Location</h2>
+   
+  <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7546.01491926266!2d73.02644879613612!3d18.975277957015702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c325329a0761%3A0xbda84bdc13b397c0!2sShagun%20Insignia!5e0!3m2!1sen!2sin!4v1753867832477!5m2!1sen!2sin"
+        width="100%" height="450" style="border:0;" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <!---Footer--->
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <!-- Change wave colors to orange -->
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255, 102, 0, 0.7)" /> <!-- Light Orange -->
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255, 102, 0, 0.5)" /> <!-- Medium Orange -->
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255, 102, 0, 0.3)" /> <!-- Darker Orange -->
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255, 102, 0, 1)" /> <!-- Solid Orange -->
+        </g>
+      </svg>
+    </div>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="window.scrollTo(0, 0)">
+      <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/918693040987" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp Chat" />
+    </a>
+
+    <!-- Link Font Awesome (if not already included) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <div class="copyright"
+      style="background-color:#F6821F; margin-top: -10px; text-align: center; color: white; padding: 15px 0;">
+      <div class="social-icons" style="margin: 10px; padding: 10px;">
+        <a href="https://www.facebook.com/people/Oceanic-Origin-Shipping/pfbid02MujApUFk4kexkSoqJYy1DAzwxacVx9N2pLRbiap237TutHtThBPu7YJcEZN3eeVAl/" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <!-- Footer with Privacy Policy, Terms & Conditions, and FAQ -->
+      <p style="color:white; font-size: 14px; text-align: center;">
+        &copy; <b>Oceanic Origin Shipping (OPC) Pvt. Ltd.</b> |
+        <b><a href="javascript:void(0);" style="color:white; text-decoration:none;" id="privacyBtn">Privacy
+            Policy</a></b> |
+        <b><a href="javascript:void(0);" style="color:white; text-decoration:none;" id="termsBtn">Terms &
+            Conditions</a></b> |
+        <b><a href="javascript:void(0);" style="color:white; text-decoration:none;" id="faqBtn">FAQ</a></b>
+      </p>
+
+      <!-- Modal for FAQ -->
+      <div id="faqModal" class="modal">
+        <div class="modal-content"
+          style="width: 70%; max-width: 900px; margin: 20px auto; height: 90vh; overflow-y: auto;">
+          <span class="close-faq"
+            style="color:#F6821F;float: right; font-size: 28px;font-weight: bold; cursor: pointer; position: sticky; top: 10px; right: 20px; z-index: 1000; background: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">&times;</span>
+
+          <div class="faq-container">
+            <div class="faq-header">
+              <h1>Frequently Asked Questions</h1>
+              <p>Find answers to common questions about Oceanic Origin Shipping (OPC) Pvt. Ltd. services and operations
+              </p>
+            </div>
+
+            <div class="search-container">
+              <i class="fas fa-search"></i>
+              <input type="text" id="faq-search" placeholder="Search questions or keywords...">
+            </div>
+
+            <div class="category-filter">
+              <button class="category-btn active" data-category="all">All</button>
+              <button class="category-btn" data-category="general">General</button>
+              <button class="category-btn" data-category="careers">Careers</button>
+              <button class="category-btn" data-category="services">Services</button>
+            </div>
+
+            <div class="no-results">
+              <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 15px; color: #ccc;"></i>
+              <h3>No results found</h3>
+              <p>Try different keywords or check our contact information below</p>
+            </div>
+
+            <div class="faq-item" data-category="general">
+              <div class="faq-question">What services does Oceanic Origin Shipping (OPC) Pvt. Ltd. provide?</div>
+              <div class="faq-answer">
+                <p>We offer comprehensive maritime crew management services including:</p>
+                <ul>
+                  <li>Crew selection and recruitment</li>
+                  <li>Personnel deployment and rotation</li>
+                  <li>Documentation and certification management</li>
+                  <li>Training and development programs</li>
+                  <li>Compliance with international maritime standards (STCW, IMO, MLC)</li>
+                  <li>Payroll and benefits administration</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="general">
+              <div class="faq-question">Where is Oceanic Origin Shipping (OPC) Pvt. Ltd. headquartered?</div>
+              <div class="faq-answer">
+                <p>Our global headquarters is located in Navi Mumbai, Maharashtra, India. We have regional offices in:
+                </p>
+                <ul>
+                  <li>Singapore (Asia-Pacific operations)</li>
+                  <li>Dubai (Middle East operations)</li>
+                  <li>Piraeus, Greece (European operations)</li>
+                  <li>Houston, USA (Americas operations)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="services">
+              <div class="faq-question">What kind of vessels do you supply crew for?</div>
+              <div class="faq-answer">
+                <p>We supply qualified crew for all major vessel types including:</p>
+                <ul>
+                  <li><strong>Oil Tankers:</strong> VLCC, Suezmax, Aframax, Product Tankers</li>
+                  <li><strong>Container Ships:</strong> Ultra Large, Post-Panamax, Feeder</li>
+                  <li><strong>Bulk Carriers:</strong> Capesize, Panamax, Handysize</li>
+                  <li><strong>Offshore Support:</strong> PSV, AHTS, FPSO, Drill Ships</li>
+                  <li><strong>Specialized:</strong> LNG/LPG carriers, Chemical Tankers, Reefer</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="careers">
+              <div class="faq-question">How can I apply for a job as a seafarer?</div>
+              <div class="faq-answer">
+                <p>We have multiple application channels:</p>
+                <ol>
+                  <li><strong>Online:</strong> Visit our careers portal and complete the application form</li>
+                  <li><strong>Email:</strong> Send your documents to careers@oceanicorigin.com</li>
+                  <li><strong>In-person:</strong> Visit our recruitment centers with:
+                    <ul>
+                      <li>Updated resume/CV</li>
+                      <li>Certificates (STCW, COC, Specialized training)</li>
+                      <li>Seaman book and passport copies</li>
+                      <li>Medical fitness certificate</li>
+                    </ul>
+                  </li>
+                </ol>
+                <p>Our recruitment team will contact you within 5-7 working days.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="services">
+              <div class="faq-question">Do you provide training for crew members?</div>
+              <div class="faq-answer">
+                <p>Yes, we operate a state-of-the-art training center with:</p>
+                <ul>
+                  <li>Mandatory STCW courses</li>
+                  <li>ISM Code familiarization</li>
+                  <li>Vessel-specific orientation</li>
+                  <li>Safety and emergency procedures</li>
+                  <li>Advanced simulator training (ECDIS, GMDSS, etc.)</li>
+                  <li>Leadership and management programs</li>
+                </ul>
+                <p>We also partner with maritime academies for specialized certifications.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="careers">
+              <div class="faq-question">What is the process of selection and joining?</div>
+              <div class="faq-answer">
+                <p>Our 5-step selection process:</p>
+                <ol>
+                  <li><strong>Document Verification:</strong> 1-2 days</li>
+                  <li><strong>Technical Interview:</strong> Conducted by senior officers</li>
+                  <li><strong>Medical Examination:</strong> Approved clinics worldwide</li>
+                  <li><strong>Contract Finalization:</strong> Including salary, benefits, and terms</li>
+                  <li><strong>Deployment:</strong> With travel arrangements and joining instructions</li>
+                </ol>
+                <p>Average processing time: 7-14 days for urgent requirements.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-category="general">
+              <div class="faq-question">Who do I contact in case of an emergency during my contract?</div>
+              <div class="faq-answer">
+                <p>We provide 24/7 emergency support through:</p>
+                <ul>
+                  <li><strong>Emergency Hotline:</strong> +91 22 1234 5678 (operational 24/7)</li>
+                  <li><strong>Email:</strong> emergency@oceanicorigin.com (monitored continuously)</li>
+                  <li><strong>Onshore Support:</strong> Local representatives in all major ports</li>
+                </ul>
+                <p>Your joining documents will include specific contact details for your vessel/region. For medical
+                  emergencies, we have tie-ups with international assistance companies.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Privacy Policy Modal -->
+      <div id="privacyModal" class="modal">
+        <div class="modal-content"
+          style="width: 90%; max-width: 900px; margin: 20px auto; height: 90vh; overflow-y: auto; padding: 30px;">
+          <span class="close-privacy"
+            style="color:#F6821F;float: right; font-size: 28px;font-weight: bold; cursor: pointer; position: sticky; top: 10px; right: 20px; z-index: 1000; background: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">&times;</span>
+
+          <div class="privacy-container">
+            <div class="privacy-header">
+              <h1>Privacy Policy</h1>
+              <!-- <p>Last Updated: June 2023</p> -->
+            </div>
+
+            <div class="privacy-section">
+              <p>Oceanic Origin Shipping (OPC) Pvt. Ltd. ("we", "us", or "our") is committed to protecting the privacy
+                of our seafarers,
+                clients, and website visitors. This Privacy Policy explains how we collect, use, disclose, and safeguard
+                your information when you use our services or visit our website.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2>1. Information We Collect</h2>
+
+              <h3>Personal Information</h3>
+              <p>We may collect the following types of personal information:</p>
+              <ul>
+                <li><strong>Identification Data:</strong> Full name, date of birth, passport details, seaman book number
+                </li>
+                <li><strong>Contact Information:</strong> Address, email, phone number, emergency contacts</li>
+                <li><strong>Professional Data:</strong> Certifications (STCW, COC), work history, training records</li>
+                <li><strong>Medical Information:</strong> Medical fitness certificates, vaccination records</li>
+                <li><strong>Financial Data:</strong> Bank details for payroll purposes, tax information</li>
+              </ul>
+
+              <h3>Non-Personal Information</h3>
+              <p>We may collect anonymous usage data when you visit our website, including:</p>
+              <ul>
+                <li>Browser type and version</li>
+                <li>Pages visited and time spent</li>
+                <li>IP address (anonymized)</li>
+                <li>Referring website</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h2>2. How We Use Your Information</h2>
+              <p>We use the collected information for the following purposes:</p>
+              <ul>
+                <li>Crew management and deployment operations</li>
+                <li>Compliance with maritime regulations (STCW, MLC, ISM)</li>
+                <li>Payroll processing and benefits administration</li>
+                <li>Training and certification tracking</li>
+                <li>Emergency contact and medical assistance</li>
+                <li>Communication regarding employment opportunities</li>
+                <li>Website improvement and user experience</li>
+                <li>Legal compliance and regulatory requirements</li>
+              </ul>
+            </div>
+
+            <div class="privacy-section">
+              <h2>3. Data Sharing and Disclosure</h2>
+              <p>We may share your information with:</p>
+              <ul>
+                <li><strong>Shipping Companies:</strong> For crew placement on vessels</li>
+                <li><strong>Maritime Authorities:</strong> For certification and compliance verification</li>
+                <li><strong>Medical Facilities:</strong> For health assessments and emergency care</li>
+                <li><strong>Training Centers:</strong> For certification and skill development</li>
+                <li><strong>Government Agencies:</strong> As required by law (immigration, tax, etc.)</li>
+                <li><strong>Service Providers:</strong> Third parties who assist in our operations (IT, payroll, etc.)
+                </li>
+              </ul>
+              <p>We <span class="highlight">do not sell</span> your personal information to third parties.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2>4. Data Security</h2>
+              <p>We implement appropriate technical and organizational measures to protect your data:</p>
+              <ul>
+                <li>Encrypted storage and transmission of sensitive data</li>
+                <li>Restricted access to personal information</li>
+                <li>Regular security audits and updates</li>
+                <li>Secure document disposal procedures</li>
+              </ul>
+              <p>Despite these measures, no electronic transmission or storage is 100% secure.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2>5. Data Retention</h2>
+              <p>We retain personal information:</p>
+              <ul>
+                <li><strong>Active Seafarers:</strong> Throughout employment plus 7 years</li>
+                <li><strong>Applicants:</strong> 2 years from last contact</li>
+                <li><strong>Medical Records:</strong> As required by maritime law</li>
+                <li><strong>Financial Data:</strong> 7 years for tax compliance</li>
+              </ul>
+              <p>Data is securely deleted when no longer needed.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2>6. Your Rights</h2>
+              <p>Depending on your jurisdiction, you may have the right to:</p>
+              <ul>
+                <li>Access your personal information</li>
+                <li>Request correction of inaccurate data</li>
+                <li>Request deletion of your data (where applicable)</li>
+                <li>Object to certain processing activities</li>
+                <li>Request restriction of processing</li>
+                <li>Data portability (where applicable)</li>
+              </ul>
+              <p>To exercise these rights, please contact our Data Protection Officer.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2>7. International Data Transfers</h2>
+              <p>As a global maritime crewing company, your data may be transferred to:</p>
+              <ul>
+                <li>Countries where vessels are registered</li>
+                <li>Our regional offices worldwide</li>
+                <li>Client companies in different jurisdictions</li>
+              </ul>
+              <p>We ensure adequate protections are in place for international transfers.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2>8. Changes to This Policy</h2>
+              <p>We may update this Privacy Policy periodically. The updated version will be posted on our website with
+                a new "Last Updated" date.</p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Modal for Terms & Conditions -->
+      <div id="termsModal" class="modal">
+        <div class="modal-content"
+          style="width: 70%; max-width: 900px; margin: 5px auto; height: 90vh; overflow-y: auto;">
+          <span class="close">&times;</span>
+
+
+          <div class="term-container">
+            <header>
+              <h1>Oceanic Origin Shipping (OPC) Pvt. Ltd.</h1>
+              <h2>Terms and Conditions of Employment</h2>
+            </header>
+
+            <div class="intro">
+              <p>These Terms and Conditions outline the responsibilities, rights, and expectations of the Company and
+                the Employee during the period of maritime employment.</p>
+            </div>
+
+            <div class="terms-content">
+              <div class="clause">
+                <h3><span class="term-number">1</span> Probation and Termination</h3>
+                <p>The Employee will be on probation during the initial period of the contract.</p>
+                <div class="highlight">
+                  <p>The Company reserves the full right to terminate the contract at any time during or after
+                    probation.</p>
+                  <p>If the Employee is found unqualified, incompetent, or lacking required ISM knowledge, only 50% of
+                    the agreed salary will be paid from the date of joining.</p>
+                  <p>All costs incurred by the Company including air tickets, agency fees, and sign-on/sign-off charges
+                    will be deducted from the Employee's salary in such cases.</p>
+                </div>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">2</span> Job Assignment and Area of Operation</h3>
+                <p>The Employee agrees to travel to the designated area of operations and work on any vessel assigned by
+                  the Company.</p>
+                <p>The Company has the right to change the vessel or operation as required.</p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">3</span> Work Schedule and Hours</h3>
+                <p>The normal working schedule will be 12 hours per day.</p>
+                <p>The Employee is entitled to a minimum of 10 hours of rest in any 24-hour period.</p>
+                <p>Work schedules are subject to change based on operational needs, emergencies, or unforeseen
+                  circumstances.</p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">4</span> Duties Onboard</h3>
+                <p>The Employee will perform duties onboard the vessel or on dockside if required, as part of normal
+                  seafaring activities.</p>
+                <p>All tasks must be carried out under supervision, in line with the Safety Management System, and with
+                  respect to maritime laws.</p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">5</span> Shore Leave</h3>
+                <p>Shore leave is granted only at the sole discretion of the Master or Company Agent, and based on
+                  operational, legal, and safety requirements.</p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">6</span> Return Travel</h3>
+                <p>The Company will provide return travel to India only after the contract is completed.</p>
+                <p>The route and mode of transportation will be decided by the Company.</p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">7</span> Salary and Leave</h3>
+                <p>The Employee will receive a monthly consolidated salary.</p>
+                <p>This salary includes leave compensation. No additional leave will accrue.</p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">8</span> Taxation and Insurance</h3>
+                <p>The Employee is responsible for paying income tax in their home country.</p>
+                <p>The Employee is responsible for maintaining valid social security insurance from their home country.
+                </p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">9</span> Bank Details</h3>
+                <p>The Employee must ensure their bank account details are accurate and updated.</p>
+                <p>The Company will not be responsible for salary payment failures due to incorrect or outdated
+                  information.</p>
+              </div>
+
+              <div class="clause highlight">
+                <h3><span class="term-number">10</span> Abandonment or Termination for Cause</h3>
+                <p>If the Employee abandons the vessel, quits, or is terminated for cause, all payments will cease
+                  immediately.</p>
+                <p>The Company will not be responsible for any further compensation or repatriation costs.</p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">11</span> Code of Conduct</h3>
+                <p>The Employee must:</p>
+                <ul>
+                  <li>Behave courteously and professionally.</li>
+                  <li>Avoid any actions that may damage the Company's reputation or property.</li>
+                  <li>Follow all laws, client rules, and safety protocols.</li>
+                </ul>
+                <p>Grounds for immediate termination include but are not limited to:</p>
+                <ul>
+                  <li>Alcohol/drug use</li>
+                  <li>Theft or misconduct</li>
+                  <li>Breach of confidentiality</li>
+                  <li>Incompetence or gross negligence</li>
+                  <li>Bringing unauthorized persons onboard</li>
+                  <li>Misrepresentation of medical or personal information</li>
+                </ul>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">12</span> Confidentiality</h3>
+                <p>The Employee shall not disclose any confidential information regarding the Company, its operations,
+                  or clients.</p>
+              </div>
+
+              <div class="clause">
+                <h3><span class="term-number">13</span> License and Documentation</h3>
+                <p>The Employee must possess and maintain all valid licenses, certificates, and documents required for
+                  their position at all times.</p>
+              </div>
+
+              <div class="clause highlight">
+                <h3><span class="term-number">14</span> Agreement Acknowledgment</h3>
+                <p>The Employee acknowledges having read, understood, and agreed to all the terms and conditions stated
+                  in this agreement.</p>
+              </div>
+            </div>
+
+
+            <footer>
+              <p>&copy; 2023 Oceanic Origin Shipping (OPC) Pvt. Ltd. All rights reserved.</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+
+
+      <script>
+
+
+
+
+
+        // Modal functionality
+        const faqBtn = document.getElementById('faqBtn');
+        const faqModal = document.getElementById('faqModal');
+        const closeFaq = document.querySelector('.close-faq');
+
+        faqBtn.addEventListener('click', function () {
+          faqModal.style.display = 'block';
+          document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+
+        closeFaq.addEventListener('click', function () {
+          faqModal.style.display = 'none';
+          document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+
+        window.addEventListener('click', function (event) {
+          if (event.target === faqModal) {
+            faqModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+          }
+        });
+
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function () {
+          const questions = document.querySelectorAll('.faq-question');
+          const searchInput = document.getElementById('faq-search');
+          const noResults = document.querySelector('.no-results');
+          const categoryBtns = document.querySelectorAll('.category-btn');
+          const faqItems = document.querySelectorAll('.faq-item');
+
+          // Toggle FAQ answers
+          questions.forEach(question => {
+            question.addEventListener('click', function () {
+              // Toggle active class on question
+              this.classList.toggle('active');
+
+              // Get the answer element
+              const answer = this.nextElementSibling;
+
+              // Toggle show class on answer
+              answer.classList.toggle('show');
+
+              // Close other open answers if this is opening
+              if (this.classList.contains('active')) {
+                questions.forEach(q => {
+                  if (q !== this && q.classList.contains('active')) {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('show');
+                  }
+                });
+              }
+            });
+          });
+
+          // Search functionality
+          searchInput.addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            let hasResults = false;
+
+            faqItems.forEach(item => {
+              const question = item.querySelector('.faq-question').textContent.toLowerCase();
+              const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+              const isVisible = item.style.display !== 'none';
+
+              if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                item.style.display = '';
+                hasResults = true;
+
+                // Highlight matching text
+                if (searchTerm.length > 2) {
+                  highlightText(item, searchTerm);
+                }
+              } else {
+                item.style.display = 'none';
+              }
+            });
+
+            // Show/hide no results message
+            noResults.style.display = hasResults || searchTerm === '' ? 'none' : 'block';
+          });
+
+          // Category filter
+          categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+              // Update active button
+              categoryBtns.forEach(b => b.classList.remove('active'));
+              this.classList.add('active');
+
+              const category = this.dataset.category;
+
+              // Filter items
+              faqItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                  item.style.display = '';
+                } else {
+                  item.style.display = 'none';
+                }
+              });
+
+              // Reset search
+              searchInput.value = '';
+              noResults.style.display = 'none';
+            });
+          });
+
+          // Highlight matching text
+          function highlightText(element, searchTerm) {
+            const question = element.querySelector('.faq-question');
+            const answer = element.querySelector('.faq-answer');
+
+            // Remove previous highlights
+            question.innerHTML = question.textContent;
+            answer.innerHTML = answer.textContent;
+
+            // Highlight in question
+            if (question.textContent.toLowerCase().includes(searchTerm)) {
+              const regex = new RegExp(searchTerm, 'gi');
+              question.innerHTML = question.textContent.replace(regex,
+                match => `<span class="highlight">${match}</span>`);
+            }
+
+            // Highlight in answer
+            if (answer.textContent.toLowerCase().includes(searchTerm)) {
+              const regex = new RegExp(searchTerm, 'gi');
+              answer.innerHTML = answer.textContent.replace(regex,
+                match => `<span class="highlight">${match}</span>`);
+
+              // Ensure answer is visible when search matches
+              if (!answer.classList.contains('show')) {
+                question.classList.add('active');
+                answer.classList.add('show');
+              }
+            }
+
+            // Add animation
+            element.classList.add('highlight');
+            setTimeout(() => {
+              element.classList.remove('highlight');
+            }, 1500);
+          }
+        });
+
+        // Privacy Modal functionality
+        const privacyBtn = document.getElementById('privacyBtn');
+        const privacyModal = document.getElementById('privacyModal');
+        const closePrivacy = document.querySelector('.close-privacy');
+
+        privacyBtn.addEventListener('click', function () {
+          privacyModal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+        });
+
+        closePrivacy.addEventListener('click', function () {
+          privacyModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        });
+
+        window.addEventListener('click', function (event) {
+          if (event.target === privacyModal) {
+            privacyModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          }
+        });
+
+
+        // Get the modal and the button
+        var modal = document.getElementById("termsModal");
+        var btn = document.getElementById("termsBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+          for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+          }
+
+          for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+          }
+
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+          sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+          sidemenu.style.right = "-200px";
+        }
+
+
+        // Show the button after scrolling down 100px
+        window.onscroll = function () {
+          const btn = document.getElementById("scrollTopBtn");
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            btn.style.display = "block";
+          } else {
+            btn.style.display = "none";
+          }
+        };
+
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+
+
+      </script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyF_GYbpIa4nGTC44b2srYHvg4ykl15fmt5fgO4Og3kzRTaa0DKJfPEa6odkk5vDb1UAw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+              msg.innerHTML = "Message Sent Successfully"
+              setTimeout(function () {
+                msg.innerHTML = "";
+              }, 2000)
+              form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+</body>
+
+</html>

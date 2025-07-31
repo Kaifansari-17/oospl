@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer with Map</title>
+
+  <!-- MDBootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+<!-- Bootstrap CSS -->
+<!-- Bootstrap Bundle JS (includes Popper) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    #map {
+      height: 300px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Footer -->
+  <footer class="bg-body-tertiary text-center text-lg-start text-muted">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4 text-center">
+        <!-- Facebook -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i></a>
+      </section>
+
+      <!-- Section: Form -->
+      <section class="text-center">
+        <form action="">
+          <div class="row d-flex justify-content-center">
+            <div class="col-auto">
+              <p class="pt-2"><strong>Sign up for our newsletter</strong></p>
+            </div>
+            <div class="col-md-5 col-12">
+              <div class="form-outline mb-4">
+                <input type="email" id="form5Example24" class="form-control" />
+                <label class="form-label" for="form5Example24">Email address</label>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-outline mb-4">Subscribe</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Section: Text -->
+      <section class="mb-4 text-center">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
+          harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+
+      <!-- Section: Map -->
+      <section class="mb-4">
+        <h5 class="text-uppercase mb-3">Our Location</h5>
+        <div id="map"></div>
+        <p id="map-address" class="mt-2">Address: Loading...</p>
+      </section>
+
+      <!-- Section: Links -->
+      <section>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li><a class="text-body" href="#!">Link 1</a></li>
+              <li><a class="text-body" href="#!">Link 2</a></li>
+              <li><a class="text-body" href="#!">Link 3</a></li>
+              <li><a class="text-body" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li><a class="text-body" href="#!">Link 1</a></li>
+              <li><a class="text-body" href="#!">Link 2</a></li>
+              <li><a class="text-body" href="#!">Link 3</a></li>
+              <li><a class="text-body" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li><a class="text-body" href="#!">Link 1</a></li>
+              <li><a class="text-body" href="#!">Link 2</a></li>
+              <li><a class="text-body" href="#!">Link 3</a></li>
+              <li><a class="text-body" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li><a class="text-body" href="#!">Link 1</a></li>
+              <li><a class="text-body" href="#!">Link 2</a></li>
+              <li><a class="text-body" href="#!">Link 3</a></li>
+              <li><a class="text-body" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2025 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+  </footer>
+
+  <!-- MDBootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    let lat = 19.03681;
+    let lng = 73.01582;
+
+    const map = L.map('map').setView([lat, lng], 13);
+    const marker = L.marker([lat, lng], { draggable: true }).addTo(map);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    function updateAddress(lat, lng) {
+      fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('map-address').textContent =
+            'Address: ' + (data.display_name || 'Not found');
+        })
+        .catch(() => {
+          document.getElementById('map-address').textContent = 'Address: Unable to retrieve';
+        });
+    }
+
+    marker.on('dragend', function (e) {
+      const position = marker.getLatLng();
+      updateAddress(position.lat, position.lng);
+    });
+
+    updateAddress(lat, lng);
+  </script>
+</body>
+</html>
